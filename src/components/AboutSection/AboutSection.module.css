@@ -1,0 +1,33 @@
+.container {
+  padding: 1rem 8%;
+  background-color: #fff;
+  border-top-left-radius: 400px;
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  position: relative;
+  top: -270px; /* 🔼 Faz o card subir */
+}
+
+.reverse {
+  flex-direction: row-reverse;
+}
+
+.image {
+  width: 28%;
+  max-width: 100%;
+}
+
+.text {
+  max-width: 700px;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: #042267;
+  margin: 15px 30px 0 30px;
+}
