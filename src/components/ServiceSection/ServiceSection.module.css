@@ -9,6 +9,7 @@
   box-sizing: border-box;
   position: relative;
   margin-top: -250px;
+  z-index: 2;
 }
 
 .title {

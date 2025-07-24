@@ -9,7 +9,7 @@ import img4 from '../../assets/images/ServiceSection/service-img4.png'
 
 export function ServiceSection() {
   return (
-    <section className={style.serviceSection}>
+    <section className={style.serviceSection} id='servicos'>
       <ServiceHeader />
       <div className={style.features}>
         <FeatureCard image={img1} text="Criem provas personalizadas com baseno perfil de cada aluno;" imagePosition="right" />

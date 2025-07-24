@@ -9,7 +9,7 @@ import img3 from '../../assets/images/sobrenos3.png';
 
 export function AboutSection() {
   return (
-    <section className={styles.container}>
+    <section className={styles.container} id='sobre-nos'>
         <AboutTitle />
         <AboutIntro />
         <AboutCard 
