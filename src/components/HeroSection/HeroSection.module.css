@@ -8,8 +8,7 @@
   flex-direction: row; /* mudar para linha */
   justify-content: space-between;
   align-items: center;
-  padding: 4rem 8%;
-  overflow: hidden;
+  padding: 2rem ;
   margin-bottom: 20px;
 }
 
@@ -49,4 +48,14 @@
 }
 .socialWrapper {
   margin-left: 10%; /* empurra 10% para a direita */
+}
+
+.maefilho {
+  position: relative;
+  max-width: 95%;
+  height: auto;
+  object-fit: contain;
+  align-self: flex-end;
+  right: -10%;
+  bottom: -3.3rem;
 }
