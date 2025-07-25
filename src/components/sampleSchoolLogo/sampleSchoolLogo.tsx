@@ -8,8 +8,8 @@ export function SampreSchoolLogo() {
         <div className={style.logo}>
             <img src={ss} alt="" className={style.image}/>
             <div className={style.name}>
-                <img src={sample} alt="" className={style.image}/>
-                <img src={school} alt="" className={style.image}/>
+                <img src={sample} alt="" className={style.imagetext}/>
+                <img src={school} alt="" className={style.imagetext}/>
             </div>
         </div>
     );

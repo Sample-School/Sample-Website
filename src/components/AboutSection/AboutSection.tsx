@@ -15,7 +15,7 @@ export function AboutSection() {
         <AboutCard 
             image={img1}
             imagePosition="right"
-            customWidth="35%" // 👈 largura personalizada só para esse card
+            customWidth="30%" // 👈 largura personalizada só para esse card
         />
         <AboutCard 
             image={img2} 

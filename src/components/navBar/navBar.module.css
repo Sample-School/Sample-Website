@@ -5,7 +5,7 @@
     display: flex;
     justify-content: space-between;
     padding: 10px 0;
-    box-sizing: border-box;
+    box-sizing: border-box; 
 }
 
 .logoWrapper {
@@ -14,7 +14,7 @@
 
 .center {
     display: flex;
-    gap: 3rem;
+    gap: 2rem;
     justify-content: center;
     flex: 1;
     text-align: center;
@@ -22,7 +22,7 @@
 
 .link {
     color: #042267;
-    font-size: 105%;
+    font-size: 1.1rem;
     font-weight: bold;
     text-transform: uppercase;
     text-decoration: none;
@@ -30,11 +30,11 @@
 
 .right {
     position: relative; /* necessário para o botão ficar dentro */
-    width: 260px; /* largura máxima que o botão terá */
+    width: 15rem; /* largura máxima que o botão terá */
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 2rem;
 }
 
 .botaoFinal {
@@ -52,7 +52,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 80%;
     height: 50px;
     padding: 0 20px;
     transition: width 0.3s ease;
@@ -61,4 +61,53 @@
 
 .botaoFinal:hover {
     width: 110%;
+}
+
+@media (max-width: 1024px) {
+    .center {
+        margin-left: -10%;
+    }
+    .botaoFinal:hover {
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .botaoFinal {
+        font-size: 12px;
+        border-radius: 30px 0 0 30px;
+        width: 70%;
+        height: 40px;
+        text-align: center;
+    }
+    .link {
+        font-size: 0.8rem;
+    }
+    .center {
+        margin-left: -15%;
+    }
+    .botaoFinal:hover {
+        width: 80%;
+    }
+}
+@media (max-width: 672px) {
+    .botaoFinal {
+        font-size: 0.65rem;
+    }
+    .link {
+        font-size: 0.75rem;
+    }
+    .right {
+        width: 35%; /* largura máxima que o botão terá */
+    }
+}
+@media (max-width: 375px) {
+    .botaoFinal {
+        margin-top: 50px;
+        font-size: 0.65rem;
+        width: 120%;
+    }
+    .botaoFinal:hover {
+        width: 140%;
+    }
 }

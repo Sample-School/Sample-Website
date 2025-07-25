@@ -59,3 +59,59 @@
   right: -10%;
   bottom: -3.3rem;
 }
+
+
+.heroSubtitle {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.heroHighlight {
+  color: #00B894;
+}
+
+.heroTitle {
+  font-size: 2.8rem;
+  font-weight: 250;
+  line-height: 1.4;
+}
+
+
+@media (max-width: 905px) {
+  .heroTitle {
+    font-size: 1.4rem;
+  }
+  .background::before {
+    display: none;
+  }
+}
+@media (max-width: 672px) {
+  .heroTitle {
+    font-size: 1rem;
+  }
+  .heroSubtitle {
+    font-size: 0.75rem;
+  }
+}
+@media (max-width: 510px) {
+  .heroTitle {
+    font-size: 1.4rem;
+  }
+  .heroSubtitle {
+    font-size: 1rem;
+  }
+  .background {
+    padding-top: 40px;
+    flex-direction: column; /* mudar para linha */
+    align-items: baseline;
+  }
+  .line {
+    width: 120%;
+    left: -20%;
+  }
+  .maefilho {
+    max-width: 70%;
+    right: -25%;
+    bottom: 0;
+  }
+}
