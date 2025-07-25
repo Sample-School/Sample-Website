@@ -15,7 +15,7 @@ export function NavBar() {
             </div>
 
             <div className={style.right}>
-                <a href="#feleconosco" className={style.botaoFinal}>Fale Conosco</a>
+                <a href="#contato" className={style.botaoFinal}>Fale Conosco</a>
             </div>
         </div>
     );
