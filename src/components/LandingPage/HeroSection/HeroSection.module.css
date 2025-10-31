@@ -1,0 +1,107 @@
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 10%;
+  background: linear-gradient(90deg, #7E86DE 0%, #00FFCC 100%);
+  color: #fff;
+  border-radius: 0 0 2rem 2rem;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.textContent {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+  z-index: 2;
+}
+
+.textContent h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.textContent h1 span {
+  color: #fff;
+  font-weight: 800;
+}
+
+.textContent p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.ctaButton {
+  background: #18b7bb;
+  color: #fff;
+  padding: 0.9rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.ctaButton:hover {
+  background: #14a3a5;
+}
+
+.subText {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+
+.imageContainer {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 300px;
+  margin-top: 0; /* remove margem superior que empurrava o notebook */
+  margin-right: -13%;
+}
+
+.imageContainer img {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+}
+
+/* 🔹 Responsividade - telas menores que 900px */
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .imageContainer {
+    order: -1; /* coloca o notebook antes do texto */
+    margin-right: 0; /* remove o deslocamento lateral */
+    margin-bottom: 2rem; /* espaço entre notebook e texto */
+  }
+  .imageContainer img {
+        max-width: 450px;
+    }
+}
+
+/* 🔹 Ajustes mobile (<600px) */
+@media (max-width: 600px) {
+  .textContent h1 {
+    font-size: 1.8rem;
+    margin-top: 1.2rem;
+  }
+
+  .textContent p {
+    margin-bottom: 2rem;
+  }
+
+  .hero {
+    padding: 3rem 10%;
+  }
+}

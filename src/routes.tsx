@@ -1,10 +1,10 @@
 import { Routes, Route } from "react-router-dom";
-import { Home } from "./pages/home";
+import { LandingPage } from "./pages/LandingPage/LandingPage";
 
 export function AppRoutes() {
     return (
         <Routes>
-            <Route path="/" element={<><Home /></>} />
+            <Route path="/" element={<><LandingPage /></>} />
         </Routes>
     );
 }

@@ -1,0 +1,162 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.3rem 3rem;
+  background-color: white;
+  position: relative;
+  z-index: 1000;
+}
+
+/* 🔹 Logo */
+.logoContainer {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 4.5rem;
+  width: auto;
+}
+
+/* 🔹 Links padrão (desktop) */
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.navLinks a {
+  position: relative;
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+  font-size: 0.8rem;
+  padding-bottom: 3px;
+}
+/* 🔹 Linha azul animada */
+.navLinks a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 1.5px;
+  background-color: #042267;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+  border-radius: 1px;
+}
+/* 🔹 Animação ao passar o mouse */
+.navLinks a:hover::after {
+  width: 100%;
+}
+
+
+/* 🔹 Botão principal */
+.ctaButton {
+  background: linear-gradient(90deg, #0699A6, #317BBA);
+  color: white;
+  border: none;
+  padding: 0.6rem 1.3rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.ctaButton:hover {
+  opacity: 0.9;
+}
+
+/* 🔹 Botão Hamburguer */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 18px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1101; /* acima do overlay */
+}
+
+.bar {
+  height: 3px;
+  width: 100%;
+  background-color: #333;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Animação do botão hamburguer */
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* 🔹 Menu Mobile */
+@media (max-width: 900px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .navLinks {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 260px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 5rem 1rem;
+    background-color: white;
+    box-shadow: -4px 0 12px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease-in-out;
+    gap: 1.5rem;
+    z-index: 1100;
+  }
+
+  .navLinks.active {
+    right: 0;
+  }
+
+  .overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+  }
+
+  .navLinks a {
+    font-size: 1rem;
+  }
+
+  .ctaButton {
+    width: 100%;
+    text-align: center;
+  }
+  .navLinks a {
+    width: 100%;
+    padding: 10px 8px;
+    border-radius: 8px;
+    background-color: #EFEFEF;
+}
+}
+
+/* 🔹 Ajuste extra para telas muito pequenas */
+@media (max-width: 500px) {
+  .navbar {
+    padding: 0.3rem 1.5rem;
+  }
+
+  .logo {
+    height: 4rem;
+  }
+}
