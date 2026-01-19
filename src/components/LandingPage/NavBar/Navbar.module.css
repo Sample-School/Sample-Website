@@ -24,6 +24,7 @@
   display: flex;
   align-items: center;
   gap: 2rem;
+  margin-right: 20%; /* Se o botão de Acessar Plataforma voltar, tem que apagar isso */
 }
 
 .navLinks a {

@@ -1,10 +1,12 @@
+import { useNavigate } from "react-router-dom";
 import styles from "./HeroSection.module.css";
-import heroImage from "../../../assets/images/Notebook_heroImage.svg";
+import heroImage from "../../../assets/images/LandingPage/Notebook_heroImage.svg";
 
 export function HeroSection() {
+  const navigate = useNavigate(); // 👈 Hook do React Router
+
   return (
     <section className={styles.hero}>
-
       <div className={styles.textContent}>
         <h1>
           Avaliações mais <span>rápidas</span>, <span>justas</span> e{" "}
@@ -15,7 +17,13 @@ export function HeroSection() {
           tecnologia automatizada.
         </p>
 
-        <button className={styles.ctaButton}>Ir para Plataforma</button>
+        {/* 🔹 Redireciona para /login
+        <button
+          className={styles.ctaButton}
+          onClick={() => navigate("/Register")}
+        >
+          Cadastre sua instituição
+        </button> */}
       </div>
 
       <div className={styles.imageContainer}>

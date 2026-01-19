@@ -1,9 +1,11 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom"; // 👈 Importa o hook
 import styles from "./Navbar.module.css";
-import logo from "../../../assets/images/logo/logo-full.svg";
+import logo from "../../../assets/images/Logo/logo-full.svg";
 
 export function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const navigate = useNavigate(); // 👈 Cria o hook de navegação
 
   const toggleMenu = () => setMenuOpen((prev) => !prev);
   const closeMenu = () => setMenuOpen(false);
@@ -32,12 +34,20 @@ export function NavBar() {
         <a href="#solucoes" onClick={closeMenu}>SOLUÇÕES</a>
         <a href="#paraquem" onClick={closeMenu}>PARA QUEM É</a>
         <a href="#contato" onClick={closeMenu}>CONTATO</a>
-        <button className={styles.ctaButton} onClick={closeMenu}>
+
+        {/* 🔹 Botão que navega para /login 
+        <button
+          className={styles.ctaButton}
+          onClick={() => {
+            closeMenu();
+            navigate("/home");
+          }}
+        >
           Acessar Plataforma
-        </button>
+        </button> */}
       </nav>
 
-      {/* 🔹 Overlay (para fechar ao clicar fora) */}
+      {/* 🔹 Overlay */}
       {menuOpen && <div className={styles.overlay} onClick={closeMenu} />}
     </header>
   );

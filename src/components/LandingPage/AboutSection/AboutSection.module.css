@@ -1,0 +1,82 @@
+/* 🔹 Container principal */
+.cardsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+/* 🔹 Card base */
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+/* 🔹 Texto */
+.text {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+  color: #042267;
+}
+
+.text p {
+  line-height: 1.7;
+  font-size: 1.2rem;
+}
+
+/* 🔹 Imagem */
+.imageWrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.imageWrapper img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 1rem;
+}
+
+/* 🔹 Fundo tipo “bolha” opcional (inspirado na imagem que mandou) */
+.imageWrapper {
+  position: relative;
+}
+.imageWrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50% 40% 60% 40% / 50%;
+  background: linear-gradient(135deg, #7e86de, #00ffcc);
+  opacity: 0.15;
+  z-index: -1;
+}
+
+/* 🔹 Responsividade */
+@media (max-width: 900px) {
+  .card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .imageWrapper img {
+    max-width: 220px;
+  }
+}
+
+@media (max-width: 600px) {
+  .aboutSection {
+    padding: 3rem 8%;
+  }
+
+  .title {
+    font-size: 1.4rem;
+  }
+
+  .text p {
+    font-size: 0.95rem;
+  }
+}

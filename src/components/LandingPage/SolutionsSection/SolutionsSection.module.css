@@ -1,0 +1,116 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  background: #f4f8ff;
+  border-radius: 0 0 2rem 0;
+  padding: 1.5rem 0;
+  flex-wrap: wrap;
+  width: 97%;
+}
+
+/* 🔹 Lado esquerdo */
+.left {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.5rem;
+  min-height: 500px;
+}
+
+.illustration {
+  width: 100%;
+  max-width: 380px;
+  height: auto;
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+.leftText {
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
+  color: #082567;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-left: 30px;
+  margin-top: 20%;
+}
+
+/* 🔹 Lado direito */
+.right {
+  flex: 2;
+  padding: 2rem 3%;
+}
+
+/* 🔹 Cards de soluções */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 2rem;
+}
+
+
+.card {
+  text-align: center;
+  border-top: 1px solid #ccc;
+  padding-top: 1rem;
+}
+
+.icon {
+  width: 52px;
+  height: auto;
+  margin: 0 auto;
+  margin-bottom: 0.5rem;
+}
+
+.card h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+.card p {
+  font-size: 0.8rem;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* 🔹 Responsividade */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left {
+    align-items: center;
+    text-align: center;
+    min-height: 0px;
+  }
+    .leftText {
+        margin-left: 0;
+        margin-top: 0;
+    }
+
+  .right {
+    border-radius: 1rem;
+  }
+
+  .title {
+    text-align: center;
+  }
+
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+  }
+  .illustration {
+    align-self: center;
+    max-width: 320px;
+    margin-top: 1rem;
+  }
+}

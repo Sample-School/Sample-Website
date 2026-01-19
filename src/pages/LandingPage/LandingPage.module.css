@@ -1,0 +1,55 @@
+.blueContainer {
+    background-color: #DAE5FF;
+    display: flex;
+    flex-direction: column;
+}
+.sobreNosConteiner {
+    padding: 4rem 3% 0 3%;
+  margin: 0 3%;
+  background: #fff;
+  color: #333;
+  border-top-right-radius: 3rem;
+  border-end-start-radius: 3rem;
+}
+.titleLeft {
+  color: #0697A4;
+  padding: 8px;
+  text-align: center;
+  width: clamp(120px, 20vw, 250px); /* ajusta a largura conforme a tela */
+  border-radius: 1.5rem 1.5rem 0 0;
+  font-size: clamp(1rem, 2vw, 1.6rem); /* reduz o texto em telas pequenas */
+  font-weight: 700;
+  margin: 0 3%;
+  margin-top: 2rem;
+  background-color: #fff;
+  text-transform: uppercase;
+}
+.titleright {
+  color: #0697A4;
+  padding: 8px;
+  text-align: center;
+  width: clamp(240px, 40vw, 450px); /* aumentei a largura mínima e máxima */
+  border-radius: 1.5rem 1.5rem 0 0;
+  font-size: clamp(1rem, 2vw, 1.6rem); /* texto maior e responsivo */
+  font-weight: 700;
+  margin: 0 3%;
+  margin-top: 2rem;
+  margin-left: auto;
+  background-color: #fff;
+  text-transform: uppercase;
+}
+.HowItWorksContainer {
+    padding: 4rem 3% 0 3%;
+  margin: 0 3%;
+  background: #fff;
+  color: #333;
+}
+
+/* 🔹 Ajuste adicional para telas muito pequenas (celulares) */
+@media (max-width: 600px) {
+  .titleLeft {
+    width: 45%;
+    font-size: 1.1rem;
+    padding: 6px;
+  }
+}

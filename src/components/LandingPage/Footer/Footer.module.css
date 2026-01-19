@@ -1,0 +1,209 @@
+.footer {
+  background: linear-gradient(90deg, #1d1d1d, #0f1e40);
+  color: white;
+  font-family: "Inter", sans-serif;
+  padding-top: 2rem;
+}
+
+/* ===== CONTAINER PRINCIPAL ===== */
+.footerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: 0 auto;
+  gap: 2rem;
+}
+
+/* ===== COLUNAS ===== */
+.footerLeft,
+.footerCenter,
+.footerRight {
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+/* Esquerda */
+.footerLeft {
+  text-align: left;
+}
+
+/* Centro */
+.footerCenter {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.footerCenter .footerIcons {
+  justify-content: center;
+  gap: 2rem;
+}
+
+.footerCenter img {
+  width: 55px;
+  height: 55px;
+}
+
+/* Direita */
+.footerRight {
+  text-align: right;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+/* ===== ELEMENTOS ===== */
+.footerTitle {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.footerSubtitle {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-bottom: 1.2rem;
+}
+
+.footerLinks {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.9rem;
+  flex-wrap: wrap;
+}
+
+.footerLinks a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footerLinks a:hover {
+  color: white;
+}
+
+/* ===== ÍCONES ===== */
+.footerIcons {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.footerIcons img {
+  background-color: #0097a7;
+  border-radius: 50%;
+  padding: 8px;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.footerIcons img:hover {
+  transform: scale(1.1);
+}
+
+/* ===== CONTATO ===== */
+.footerContact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+
+.footerButton {
+  color: #ccc;
+  font-size: 0.9rem;
+  text-decoration: none;
+  border: 1px solid #ccc;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.footerButton:hover {
+  color: white;
+  border-color: white;
+  background-color: #0097a7;
+}
+
+/* ===== RODAPÉ INFERIOR ===== */
+.footerBottom {
+  text-align: center;
+  background-color: #d8e0ff;
+  color: #000;
+  font-size: 0.8rem;
+  padding: 0.6rem 0;
+  margin-top: 2rem;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+
+/* Tablets (<= 1024px) */
+@media (max-width: 1024px) {
+  .footerContainer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem; /* 🔹 reduzido para evitar espaçamento exagerado */
+  }
+
+  .footerLeft,
+  .footerCenter,
+  .footerRight {
+    align-items: center;
+    text-align: center;
+    gap: 0.6rem;
+  }
+
+  .footerRight {
+    margin-top: 0.5rem;
+  }
+
+  .footerCenter img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* Celulares (<= 600px) */
+@media (max-width: 600px) {
+  .footer {
+    padding-top: 1.5rem;
+  }
+
+  .footerContainer {
+    gap: 0.8rem; /* 🔹 menos espaço entre colunas */
+  }
+
+  .footerTitle {
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .footerSubtitle {
+    font-size: 0.85rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .footerIcons {
+    gap: 0.8rem;
+    margin-top: 0.6rem;
+  }
+
+  .footerIcons img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .footerButton {
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .footerBottom {
+    margin-top: 1.5rem;
+    font-size: 0.75rem;
+  }
+}
