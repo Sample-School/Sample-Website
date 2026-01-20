@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom"; // 👈 Importa o hook
 import styles from "./Navbar.module.css";
 import logo from "../../../assets/images/Logo/logo-full.svg";
 

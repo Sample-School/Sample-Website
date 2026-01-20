@@ -1,9 +1,7 @@
-import { useNavigate } from "react-router-dom";
 import styles from "./HeroSection.module.css";
 import heroImage from "../../../assets/images/LandingPage/Notebook_heroImage.svg";
 
 export function HeroSection() {
-
   return (
     <section className={styles.hero}>
       <div className={styles.textContent}>
