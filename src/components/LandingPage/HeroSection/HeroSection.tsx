@@ -3,7 +3,6 @@ import styles from "./HeroSection.module.css";
 import heroImage from "../../../assets/images/LandingPage/Notebook_heroImage.svg";
 
 export function HeroSection() {
-  // const navigate = useNavigate();
 
   return (
     <section className={styles.hero}>

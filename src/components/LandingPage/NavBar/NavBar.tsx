@@ -5,7 +5,6 @@ import logo from "../../../assets/images/Logo/logo-full.svg";
 
 export function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false);
-  // const navigate = useNavigate(); // 👈 Cria o hook de navegação
 
   const toggleMenu = () => setMenuOpen((prev) => !prev);
   const closeMenu = () => setMenuOpen(false);
